@@ -1,0 +1,53 @@
+<h1> Edit Here :: </h1> 
+
+<div>
+    <button *ngIf="property.bold==true" id="jBold" mat-button (click)="onBold()" ><i class="glyphicon glyphicon-bold" ></i></button>
+    <button *ngIf="property.italic==true" id="jitalic" mat-button (click)="onItalics()" ><i class="glyphicon glyphicon-italic"></i></button>
+    <button *ngIf="property.underline==true" id="junderline" mat-button (click)="onUnderline()" >U</button>
+    <div class="dropdown">
+            <button *ngIf="property.fontSize==true" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-font"></i></button>
+            <ul class="dropdown-menu butn3">
+                    <button class="dropdown-item" mat-button (click)="onFont('1px')" style="font-size:small">s</button>
+                    <button class="dropdown-item" mat-button (click)="onFont('5px')" style="font-size:medium">m</button>
+                    <button class="dropdown-item" mat-button (click)="onFont('10px')" style="font-size:large">l</button>
+                </ul>
+                </div>
+    <div class="dropdown">
+    <button *ngIf="property.fontColor==true" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-text-color"></i></button>
+        <ul class="dropdown-menu butn1">
+          <button class="dropdown-item" mat-button (click)="onColor('blue')" style="background: blue"></button>
+          <button class="dropdown-item" mat-button (click)="onColor('red')" style="background: red"></button>
+          <button class="dropdown-item" mat-button (click)="onColor('green')" style="background: green"></button>
+          <button class="dropdown-item" mat-button (click)="onColor('yellow')" style="background: yellow"></button>
+          <br>
+          <button class="dropdown-item" mat-button (click)="onColor('black')" style="background: black"></button>
+          <button class="dropdown-item" mat-button (click)="onColor('white')" style="background: white"></button>
+          <button class="dropdown-item" mat-button (click)="onColor('grey')" style="background: grey"></button>
+          <button class="dropdown-item" mat-button (click)="onColor('orange')" style="background: orange"></button>
+          <br>
+          <button class="dropdown-item" mat-button (click)="onColor('pink')" style="background: pink"></button>
+          <button class="dropdown-item" mat-button (click)="onColor('darkblue')" style="background: darkblue"></button>
+          <button class="dropdown-item" mat-button (click)="onColor('lightseagreen')" style="background: lightseagreen"></button>
+          <button class="dropdown-item" mat-button (click)="onColor('darkmagenta')" style="background: darkmagenta"></button>
+          <button class="dropdown-item" mat-button (click)="onColor('normal')"></button>
+
+        </ul>
+    </div>
+    <div class="dropdown">
+    <button *ngIf="property.link==true" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-link"></i></button>
+    <ul class="dropdown-menu butn2">
+        <input #url ><br>
+        <input #text  ><br>
+        <button mat-button (click)="onInsert(url.value,text.value)" >Insert</button>
+        </ul>
+        </div>
+        <button *ngIf="property.viewCode==true" mat-button (click)="onCodeview()">View</button>
+        <div id='contentedit'  *ngIf = "code" contenteditable="true" style="height:100px;width:200px; border:2px solid black"
+        [innerText]="editorCodeView"></div>
+    <br>
+    
+</div><br><br>
+ 
+<div id='contentedit' contenteditable="true" style="height:100px;width:200px; border:2px solid black" >
+
+</div>

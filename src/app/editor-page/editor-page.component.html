@@ -1,0 +1,13 @@
+<div class="col-sm-3">
+  <app-edit (editorEvent)="valueUpdate($event)" [data]="editedValue" [props]="{bold:true,italic:true,underline:false,
+    fontSize:false,fontColor:true,link:true,viewCode:true}" >      
+  </app-edit>
+</div>
+<div class="col-sm-9">
+    <div class="col-sm-12">
+        <h1> Updated Content :: </h1> 
+        <p [innerHTML]="editedValue">
+        </p>
+    </div>
+</div>
+

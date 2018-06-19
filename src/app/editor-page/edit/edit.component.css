@@ -1,0 +1,19 @@
+.butn1{
+    width:35px;
+}
+button.dropdown-item{
+    width:35px;
+    height:24px;
+}
+.dropdown{
+    display:inline;
+}
+#fake_textarea {
+  width: 100%;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.button {
+  font-weight: bold;
+}
