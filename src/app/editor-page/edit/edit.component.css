@@ -17,3 +17,10 @@ button.dropdown-item{
 .button {
   font-weight: bold;
 }
+
+.small {
+  font-size: 50px;
+}
+.font_size {
+  font-size: 10px;
+}

@@ -6,14 +6,15 @@ import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./editor-page.component.css']
 })
 export class EditorPageComponent implements OnInit {
+  //  coloritems = ['red','blue','yellow','green']
 
   constructor() { }
 
   ngOnInit() {
   }
-  public editedValue: any = "<h1>hello world</h1>";
+  editedValue: string = "<p>hello world</p>";
 
-  valueUpdate(event: object) {
+  valueUpdate(event: string) {
     this.editedValue = event;
   }
 }
