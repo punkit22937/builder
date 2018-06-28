@@ -59,7 +59,7 @@ export class EditComponent implements OnInit, AfterViewInit {
   onFont(fosize) {
     var sel, range;
     if (window.getSelection) {
-        // IE9 and non-IE
+        
         sel = window.getSelection();
         var selectedText = sel.toString();
         if (sel.getRangeAt && sel.rangeCount) {
